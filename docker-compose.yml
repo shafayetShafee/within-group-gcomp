@@ -1,7 +1,7 @@
 
 services:
   rstudio:
-    image: ghcr.io/shafayetshafee/within-group-gcomp:0.0.9
+    image: ghcr.io/shafayetshafee/within-group-gcomp:latest
     container_name: within-group-gcomp
     ports:
       - "8787:8787"

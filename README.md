@@ -17,6 +17,12 @@ data with unmeasured cluster context
 
 ```yaml
 ├── analysis-figures/        # Figures generated from the real-data application
+|
+├── create_rprofile.sh       # Configures .Rprofile inside the Docker container
+├── docker-compose-dev.yml   # Compose setup for local development
+├── docker-compose.yml       # Compose setup for reproducing the analysis
+├── Dockerfile               # Docker image build configuration
+|
 ├── LICENSE.md               # CCBY 4.0 License
 ├── mics_raw_data/           # Raw MICS survey data files (child and women modules)
 |
@@ -30,11 +36,43 @@ data with unmeasured cluster context
 ├── README.md                # Project documentation
 ├── renv/                    # Project-local package library managed by renv
 ├── renv.lock                # Exact package versions for reproducibility
+├── system-deps.md           # System library to R package dependency mapping
 |
 ├── simulation-figures/      # Figures generated from simulation study results
 └── within-group-gcomp.Rproj # RStudio project file
 ```
 
-**Note:** Raw MICS data required to replicate the findings of real data application 
-is not included here in this repository to save space. Instructions to get them 
-are provided in [`mics_raw_data/README.md`](mics_raw_data/README.md).
+**Note:** Raw MICS data required to replicate the real data application findings are
+not included in this GitHub repository to save space, but are bundled in the Docker
+image. However, one can get them for free from MICS website after signup/login. 
+See [`mics_raw_data/README.md`](mics_raw_data/README.md) for details.
+
+
+## Reproducing the study findings using Docker
+
+**Prerequisite:** [Docker](https://docs.docker.com/get-docker/) installed on your system.
+
+**Steps:**
+
+1. Pull and run the container using the pre-built image from GitHub Container Registry:
+
+```bash
+   docker run -d -p 8787:8787 --name within-group-gcomp \
+     ghcr.io/shafayetshafee/within-group-gcomp:latest
+```
+gi
+   This image includes the correct R version, RStudio Server, MICS raw survey data
+   (children and women modules), and all R package dependencies exactly as used in
+   the analysis.
+
+2. Open your browser and go to `http://localhost:8787`.
+
+3. You will be connected to an RStudio Server session with the project pre-loaded
+   and all dependencies installed. Run the simulation and analysis scripts directly
+   from within RStudio Server.
+
+4. To stop the container when done:
+
+```bash
+   docker stop within-group-gcomp
+```
