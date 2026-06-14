@@ -4,7 +4,8 @@
 [![Reproducible Environment: renv](https://img.shields.io/badge/reproducible%20environment-renv-lightgreen.svg)](https://rstudio.github.io/renv/)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-orange.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Formatted with air v0.7.1](https://img.shields.io/badge/formatted%20with-air%200.7.1-purple)](https://github.com/posit-dev/air)
-
+[![Docker Image](https://img.shields.io/badge/docker-ghcr.io/shafayetshafee/within--group--gcomp-blue?logo=docker)](https://ghcr.io/shafayetshafee/within-group-gcomp)
+[![Workflow](https://github.com/shafayetShafee/within-group-gcomp/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/shafayetShafee/within-group-gcomp/actions/workflows/docker-publish.yml)
 
 This repository contains the data and R code necessary to replicate the findings
 of the simulation and real data application of the study
@@ -56,11 +57,11 @@ See [`mics_raw_data/README.md`](mics_raw_data/README.md) for details.
 
 1. Pull and run the container using the pre-built image from GitHub Container Registry:
 
-```bash
+   ```bash
    docker run -d -p 8787:8787 --name within-group-gcomp \
      ghcr.io/shafayetshafee/within-group-gcomp:latest
-```
-gi
+   ```
+
    This image includes the correct R version, RStudio Server, MICS raw survey data
    (children and women modules), and all R package dependencies exactly as used in
    the analysis.
@@ -73,6 +74,6 @@ gi
 
 4. To stop the container when done:
 
-```bash
+   ```bash
    docker stop within-group-gcomp
-```
+   ```
