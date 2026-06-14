@@ -1,0 +1,13 @@
+name: reproducible-within-group-gcomp
+
+services:
+  rstudio:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: within-group-gcomp
+    ports:
+      - "8787:8787"
+    environment:
+      DISABLE_AUTH: "true"
+    restart: unless-stopped
