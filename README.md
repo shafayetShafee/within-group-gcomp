@@ -59,8 +59,8 @@ See [`mics_raw_data/README.md`](mics_raw_data/README.md) for details.
 1. Pull and run the container using the pre-built image from GitHub Container Registry:
 
    ```bash
-   docker run -d -p 8787:8787 --name within-group-gcomp \
-     ghcr.io/shafayetshafee/within-group-gcomp:latest
+   docker run -d -p 8787:8787 -e DISABLE_AUTH=true --name within-group-gcomp \
+  ghcr.io/shafayetshafee/within-group-gcomp:latest
    ```
 
    This image includes the correct R version, RStudio Server, MICS raw survey data
@@ -76,5 +76,5 @@ See [`mics_raw_data/README.md`](mics_raw_data/README.md) for details.
 4. To stop the container when done:
 
    ```bash
-   docker stop within-group-gcomp
+   docker rm -f within-group-gcomp
    ```
