@@ -8,10 +8,11 @@
 [![Workflow](https://github.com/shafayetShafee/within-group-gcomp/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/shafayetShafee/within-group-gcomp/actions/workflows/docker-publish.yml)
 
 This repository contains the data and R code necessary to replicate the findings
-of the simulation and real data application of the study
+of the simulation and real data application associated with the preprint manuscript,
 
-> G-computation for causal effect estimation from observational hierarchical 
-data with unmeasured cluster context
+> Shafee, S. K., Sarker, B., & Sium, M. N. I. (2026). G-computation for causal 
+effect estimation from observational hierarchical data with unmeasured cluster 
+context. arXiv [Stat.ME]. Retrieved from http://arxiv.org/abs/2606.14131.
 
 
 ## Directories & files descriptions
