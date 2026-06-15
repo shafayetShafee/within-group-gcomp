@@ -22,6 +22,8 @@ RUN apt-get update -qq && apt-get install -y --no-install-recommends \
     make \
     # document rendering
     pandoc \
+    # extra
+    libx11-dev \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
@@ -33,10 +35,6 @@ WORKDIR /home/rstudio/within-group-gcomp
 COPY . .
 RUN chown -R rstudio:rstudio /home/rstudio/within-group-gcomp
 
-# renv config — use RSPM binaries, increase timeout for arm64 builds
-ENV RENV_CONFIG_PPM_ENABLED=true
-ENV RENV_CONFIG_PPM_URL=https://packagemanager.posit.co/cran/latest
-ENV RENV_CONFIG_INSTALL_TIMEOUT=3600
 
 USER rstudio
 RUN R -e "renv::restore()"
