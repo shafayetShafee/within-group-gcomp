@@ -60,7 +60,7 @@ See [`mics_raw_data/README.md`](mics_raw_data/README.md) for details.
 
    ```bash
    docker run -d -p 8787:8787 -e DISABLE_AUTH=true --name within-group-gcomp \
-  ghcr.io/shafayetshafee/within-group-gcomp:latest
+      ghcr.io/shafayetshafee/within-group-gcomp:latest
    ```
 
    This image includes the correct R version, RStudio Server, MICS raw survey data
