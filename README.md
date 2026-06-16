@@ -8,12 +8,14 @@
 [![Workflow](https://github.com/shafayetShafee/within-group-gcomp/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/shafayetShafee/within-group-gcomp/actions/workflows/docker-publish.yml)
 [![DOI](https://img.shields.io/badge/DOI-10.6084%2Fm9.figshare.32676144-cyan)](https://doi.org/10.6084/m9.figshare.32676144)
 
-This repository contains the data and R code necessary to replicate the findings
-of the simulation and real data application associated with the preprint manuscript,
 
-> Shafee, S. K., Sarker, B., & Sium, M. N. I. (2026). G-computation for causal 
-effect estimation from observational hierarchical data with unmeasured cluster 
-context. arXiv [Stat.ME]. Retrieved from http://arxiv.org/abs/2606.14131.
+> [!NOTE]
+> This repository contains the data and R code necessary to replicate the findings
+> of the simulation and real data application associated with the preprint manuscript,
+>
+> > Shafee, S. K., Sarker, B., & Sium, M. N. I. (2026). G-computation for causal 
+> effect estimation from observational hierarchical data with unmeasured cluster 
+> context. arXiv [Stat.ME]. Retrieved from http://arxiv.org/abs/2606.14131.
 
 
 ## Directories & files descriptions
@@ -45,10 +47,11 @@ context. arXiv [Stat.ME]. Retrieved from http://arxiv.org/abs/2606.14131.
 └── within-group-gcomp.Rproj # RStudio project file
 ```
 
-**Note:** Raw MICS data required to replicate the real data application findings are
-not included in this GitHub repository to save space, but are bundled in the Docker
-image. However, one can get them for free from MICS website after signup/login. 
-See [`mics_raw_data/README.md`](mics_raw_data/README.md) for details.
+> [!IMPORTANT]
+> Raw MICS data required to replicate the real data application findings are
+> not included in this GitHub repository to save space, but are bundled in the Docker
+> image. However, one can get them for free from MICS website after signup/login. 
+> See [`mics_raw_data/README.md`](mics_raw_data/README.md) for details.
 
 
 ## Reproducing the study findings using Docker
@@ -64,7 +67,7 @@ See [`mics_raw_data/README.md`](mics_raw_data/README.md) for details.
       --name within-group-gcomp ghcr.io/shafayetshafee/within-group-gcomp:latest
    ```
 
-   This image includes the correct R version, RStudio Server, MICS raw survey data
+   > This image includes the correct R version, RStudio Server, MICS raw survey data
    (children and women modules), and all R package dependencies exactly as used in
    the analysis.
 
