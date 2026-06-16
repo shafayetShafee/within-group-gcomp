@@ -6,6 +6,7 @@
 [![Formatted with air v0.7.1](https://img.shields.io/badge/formatted%20with-air%200.7.1-purple)](https://github.com/posit-dev/air)
 [![Docker Image](https://img.shields.io/badge/docker-ghcr.io/shafayetshafee/within--group--gcomp-blue?logo=docker)](https://ghcr.io/shafayetshafee/within-group-gcomp)
 [![Workflow](https://github.com/shafayetShafee/within-group-gcomp/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/shafayetShafee/within-group-gcomp/actions/workflows/docker-publish.yml)
+[![DOI](https://img.shields.io/badge/DOI-10.6084%2Fm9.figshare.32676144-cyan)](https://doi.org/10.6084/m9.figshare.32676144)
 
 This repository contains the data and R code necessary to replicate the findings
 of the simulation and real data application associated with the preprint manuscript,
